@@ -31,7 +31,7 @@
 | :pencil: semana 3 | *Diego Alvarez* |
 | :pencil: semana 4 | *Natán Jabie* |
 | :pencil: semana 5 | *Hilda Yolanda Ortiz* |
-| :pencil: semana 6 | *Marcelo Lamas * |
+| :pencil: semana 6 | *Marcelo Lamas* |
 | :pencil: semana 7 | *Veronica Cardenas* |
 | :pencil: semana 8 | *Martín Nazareno Maya* |
 
