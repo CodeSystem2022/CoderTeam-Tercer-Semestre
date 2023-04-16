@@ -26,7 +26,12 @@
 
 | **Número de semana** | **Scrum Master** |
 | ---- | ---- |
-| :pencil: semana 1 | *Miembro A* |
-| :pencil: semana 2 | *Miembro B* |
-| :pencil: semana 3 | *Miembro C* |
-| :pencil: semana 4 | *Miembro D* |
+| :pencil: semana 1 | *Adan Gomez* |
+| :pencil: semana 2 | *Gonzalo Quiroga Sassu* |
+| :pencil: semana 3 | *Diego Alvarez* |
+| :pencil: semana 4 | *Natán Jabie* |
+| :pencil: semana 5 | *Hilda Yolanda Ortiz* |
+| :pencil: semana 6 | *Marcelo Lamas * |
+| :pencil: semana 7 | *Veronica Cardenas* |
+| :pencil: semana 8 | *Martín Nazareno Maya* |
+
