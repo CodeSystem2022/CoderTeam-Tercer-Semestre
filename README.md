@@ -7,21 +7,21 @@
 
 ### `INTEGRANTES:`
 
--:computer: Adan Gomez
+-:computer: Adan Gomez.
 
--:computer: Gonzalo Quiroga Sassu
+-:computer: Gonzalo Quiroga Sassu.
 
--:computer: Diego Alvarez
+-:computer: Diego Alvarez.
 
--:computer: Natán Jabie
+-:computer: Natán Jabie.
 
--:computer: Hilda Yolanda Ortiz 
+-:computer: Hilda Yolanda Ortiz.
 
--:computer: Marcelo Lamas 
+-:computer: Marcelo Lamas.
 
--:computer: Veronica Cardenas
+-:computer: Veronica Cardenas.
 
--:computer: Martín Nazareno Maya 
+-:computer: Martín Nazareno Maya. 
 
 
 
