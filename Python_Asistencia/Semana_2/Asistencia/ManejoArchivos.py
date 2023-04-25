@@ -3,7 +3,7 @@ class ManejoArchivos:
         self.nombre = nombre
     def __enter__(self):
         print('Obtenemos el recurso'.center(50,'-'))
-        self.nombre = open(self.nombre,'r',encoding='utf8')#Encapsulamos el codigo dentro del metodo
+        self.nombre = open(self.nombre,'r',encoding='utf8')#Encapsulamos el codigo dentro del metodo.
         return self.nombre
     
     def __exit__(self,tipo_exeption, valor_exeption, traza_error):
