@@ -12,7 +12,7 @@ try:
 except Exception as e:
     print(e)
 finally: #siempre se ejecuta
-    archivo.close()#Para que se cierre el archivo
+    archivo.close()#Para que se cierre el archivo.
 #archivo.write('Todo quedó perfecto'): este es un error
 
 
