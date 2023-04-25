@@ -4,7 +4,7 @@ from ManejoArchivos import ManejoArchivos
 #with open('prueba.txt', 'r', encoding='utf8') as archivo:
     #print(archivo.read())
 #No hace falta ni el try, ni el finally
-#En el contexto de with los que se ejecuta de manera automatica
+#En el contexto de with los que se ejecuta de manera automática
 #Utiliza diferentes métodos: __enter__ este es el que abre
 #Ahora el siguiente método es el que cierra: __exit__
 
