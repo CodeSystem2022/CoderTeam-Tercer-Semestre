@@ -2,7 +2,6 @@ miFuncion(8, 3); //esto se lo conoce como hosting
 
 function miFuncion(a, b){
    console.log("sumamos: "+ (a,b));
-   return a + b;
 }
 
 //llamamos a la funcion
