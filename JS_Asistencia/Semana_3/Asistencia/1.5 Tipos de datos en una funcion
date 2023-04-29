@@ -1,0 +1,9 @@
+console.log(typeof miFuncion);
+function miFuncion2(a, b){
+    console.log(arguments.lenght);
+}
+miFuncion2(5, 7);
+
+//to String
+var miFuncionTexto = miFuncionText.toString();
+console.log(miFuncionTexto);
