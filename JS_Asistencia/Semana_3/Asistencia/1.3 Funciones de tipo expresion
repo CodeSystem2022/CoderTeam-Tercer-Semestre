@@ -1,0 +1,4 @@
+//declaramos una funcion de tipo expresion o anonima
+let x = function(a, b){return a + b}; //necesita cierre con punto y coma
+resultado = x(6, 7); //al llamarla se pone la variable y parentesis
+console.log(resultado);
