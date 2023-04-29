@@ -1,0 +1,4 @@
+//Funcion flecha
+const sumarFuncionFlecha = (a, b) => a + b;
+resultado = sumarFuncionFlecha(3, 7); //asignamos el valor a una variable
+console.log(resultado);
