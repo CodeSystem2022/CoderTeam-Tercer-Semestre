@@ -1,0 +1,97 @@
+
+import psycopg2 # esto es para poder contactarnos a postgre
+
+conexion = psycopg2.connect(
+    user='postgres1',
+    password="Admin",
+    host='127.0.0.1',
+    port='5432',
+    database='test_bd'
+)
+##print(conexion) aca recuperamos todos los registros
+# try:
+#     with conexion:
+#         with conexion.cursor()  as cursor:
+#             sentencia='SELECT * FROM persona'
+#             cursor.execute(sentencia)# de esta manera ejecutamos la sentencia
+#             registros = cursor.fetchall()#recupera todos los registros de la sentencia
+#             print(registro)
+# except Exception as e:
+#                 print(f'ocurrio un error:{e}')
+# finally:
+
+#conexion.close
+# https://www.psycopg.org/docs/usage.html, aca recuperamos los campos que queremos
+
+# try:
+ #     with conexion:
+#         with conexion.cursor()  as cursor:
+#             sentencia='SELECT id_persona, nombre FROM persona'
+#             cursor.execute(sentencia)# de esta manera ejecutamos la sentencia
+#             registros = cursor.fetchall()#recupera todos los registros de la sentencia
+#             print(registros)
+# except Exception as e:
+#     print(f'ocurrio un error:{e}')
+# finally:
+#      conexion.close
+# con este bloque recuperamos los registros que necesitamos, esto se llama codigo duro
+# try:
+#     with conexion:
+#         with conexion.cursor()  as cursor:
+#             sentencia='SELECT * FROM persona WHERE id_persona=1'
+#             cursor.execute(sentencia)# de esta manera ejecutamos la sentencia
+#             registros = cursor.fetchall()#recupera todos los registros de la sentencia
+#             print(registros)
+# except Exception as e:
+#     print(f'ocurrio un error:{e}')
+# finally:
+#      conexion.close
+
+# ahora vemos como mostramos registros por parametros, parametro posicional(placeholder)
+
+# try:
+#     with conexion:
+#         with conexion.cursor()  as cursor:
+#             sentencia = 'SELECT * FROM persona WHERE id_persona = %s'
+#             id_persona = input("ingrese un numero de registro de id_persona: ")
+#             cursor.execute(sentencia, (id_persona,))# de esta manera ejecutamos la sentencia
+#             registros = cursor.fetchone()#recupera todos los registros de la sentencia
+#             #for registro in registros:
+#             print(registros)
+# except Exception as e:
+#     print(f'ocurrio un error:{e}')
+# finally:
+#      conexion.close()
+
+# aca realizamos un print con un for muestra todos los registros
+# try:
+#     with conexion:
+#         with conexion.cursor()  as cursor:
+#             sentencia = 'SELECT * FROM persona WHERE id_persona IN(1,2)'
+#            # id_persona = input("ingrese un numero de registro de id_persona: ")
+#             cursor.execute(sentencia) # de esta manera ejecutamos la sentencia
+#             registros = cursor.fetchall()#recupera todos los registros de la sentencia
+#             for registro in registros:
+#                 print(registro)
+# except Exception as e:
+#     print(f'ocurrio un error:{e}')
+# finally:
+#      conexion.close()
+# aca se va sustituir con codigo duro, debemos pasar una tupla de tupla
+try:# codigo mas dinamico
+    with conexion:
+        with conexion.cursor() as cursor:
+            sentencia = 'SELECT * FROM persona WHERE id_persona IN %s '
+            entrada = input("ingrese los id_persona,(separados por coma: )")
+            llaves_primarias = (tuple(entrada.split(', ')),)
+            cursor.execute(sentencia, llaves_primarias)# de esta manera ejecutamos la sentencia
+            registros = cursor.fetchall()#recupera todos los registros de la sentencia 
+            for registro in registros:
+                print(registro)
+except Exception as e:
+    print(f'ocurrio un error:{e}')
+finally:
+     conexion.close()
+
+
+
