@@ -1,0 +1,18 @@
+
+import psycopg2  # esto es para poder contactarnos a postgres
+# con este codigo insertamos varios registros
+conexion = psycopg2.connect(user='postgres1', password="Admin", host='127.0.0.1', port='5432', database='test_bd')
+
+try:
+    with conexion:
+        with conexion.cursor() as cursor:
+             sentencia = 'DELETE FROM persona WHERE id_persona IN %s'
+             entrada = input('ingrse los numeros de registros a eliminar(separados por coma): ')
+             valores = (tuple(entrada.split(',')),)# es unatupla de valores
+             cursor.execute(sentencia, valores) # de esta manera ejecutamos la sentencia
+             registros_eliminados = cursor.rowcount
+             print(f'los registros Eliminados son: {registros_eliminados }')
+except Exception as e:
+     print(f'ocurrio un error:{e}')
+finally:
+     conexion.close()
