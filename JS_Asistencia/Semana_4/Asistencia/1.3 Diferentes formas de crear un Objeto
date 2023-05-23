@@ -1,0 +1,5 @@
+Let persona2 = new Object(); //debe crear un nuevo objeto de memoria
+persona2.nombre = 'juan';
+persona2.direccion = 'mendoza 321';
+persona2.telefono = '2604386218';
+console.log(persona2.telefono);
