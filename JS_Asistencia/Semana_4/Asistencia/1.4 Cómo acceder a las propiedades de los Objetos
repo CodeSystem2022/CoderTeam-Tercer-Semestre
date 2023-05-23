@@ -1,0 +1,7 @@
+console.log(persona[apellido]; //accedemos como si fuera un arreglo
+
+//for in y accedemos al objeto como si fuese un arreglo
+for(propiedad in persona){
+    console.log(propiedad);
+    console.log(persona[propiedad]);
+}
