@@ -1,0 +1,149 @@
+
+Aca todo el codigo con el trabajamos en la clase 5
+let x =10;//variable de tipo primitivo
+console.log(x.length);
+//objeto
+let persona = {
+    nombre: "Carlos",
+    apellido: "Gil",
+    email:'cgil@gmail.com',
+    edad: 28,
+    idioma: 'ES',
+    get lang(){
+        return this.idioma.toUpperCase();
+    },
+    set lang(lang){
+        this.idioma = lang.toUpperCase();
+    },
+
+    nombreCompleto: function(){//metodo o fnctio en java script
+        return this.nombre+" "+this.apellido;
+    },
+    get nombreEdad(){// metodo get
+        return 'El nombre es:'+this.nombre+', edad: '+this.edad;
+
+    },
+    get lang(){
+        return this.idioma.toUpperCase();
+    }
+   } 
+
+console.log(persona.nombre);  
+console.log(persona.apellido);
+console.log(persona.email);
+console.log(persona.edad);
+console.log(persona); 
+console.log(persona.nombreCompleto);
+
+let persona2 = new object();//debe crear 1 nuevo 
+//objeto en memoria
+persona2.nombre = 'Juan';
+persona2.direccion = 'Salada 14';
+persona2.telefono = '549336876';
+console.log(persona2.telefono);
+
+console.log(persona['nombre']);
+
+// for in 
+for(propiedad in persona){
+    console.log(propiedad);
+    console.log(persona[propiedad]);
+}
+// agregar y /o eliminar
+persona.apellida = 'Betancud';//cambiamos dinamicamente 
+console.log(persona); //para borrar delete antesde lo que se borra 
+delete persona.apellida; 
+
+//distintas formas de imprimir un objeto
+// numero 1:conacatenar cada valor d cada propiedad
+
+console.log(persona.nombre+' '+persona.apellido);
+
+//numero 2
+for (nombrePropiedad in persona){
+    console.log(persona[nombrePropiedad]);
+}
+// 3 funcion object.values()
+let personaArray = object.values(persona);
+console.log(personaArray);
+
+ // numero 4 usamos json.stringify
+ let personaString = json.Stringify(persona);
+ console.log(personaString);
+ console.log('comenzamos a utilizar el metodo get');
+ console.log(persona.nombreEdad);
+
+ console.log('comenzamos con el metodo get y set para idioma');
+ persona.lang = 'en';
+ console.log(persona.lang);
+
+
+function Persona3(nombre, apellido, email){//constructor
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre+' '+this.apellido;
+    }
+}
+let padre = new Persona3('Leo', 'Lopez', 'lopezl@gmail.com');
+padre.telefono = "456789";
+console.log(padre);
+console.log(padre.nombreCompleto());
+
+let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
+//madre.telefono = '789222211';
+console.log(madre);
+console.log(madre.nombreCompleto());
+ 
+let miObjeto = new Object();
+let miObjeto2 =  {};
+let miCadena1 = new String('Hola');//sintaxis formal
+//caso string 2
+let miCadena2 = 'Hola';
+
+// con numeros creacion de objetos 
+
+let miNumero = new Number(1);
+let miNumero2 = 1;
+
+let miBoolean = new Boolean(false);
+let miBoolean2 = false;
+//caso Arreglos
+
+let miArreglo1 = new Array();
+let miArreglo2 = [];
+
+let miFuncion = new function(){};
+let miFuncion2 = function() {};// sintaxis formal y simplificada recomendada
+
+// uso de prototype
+ 
+Persona3.prototype.telefono = '78999954';
+console.log(padre);
+console.log(madre);
+madre.telefono = '4578888955';
+console.log(madre.telefono);
+
+// uso de call, podemos llamar a unmetodo que esta en otro objet 
+
+let Persona4 ={
+    nombre: 'Jose',
+    apellido:"Peres",
+    nombreCompleto2: function(titulo, telefono){
+        //return titulo+' : '+this.nombre+' '+this.apellido+' '+telefono;
+       return this.nombre+' '+this.apellido;
+       }
+    }
+    
+ let Persona5 = {
+    nombre: "Carlos",
+    apellido:"Lara"
+ }
+ console.log(Persona4.nombreCompleto2('Licenciado', '4578899955'));
+ console.log(Persona4.nombreCompleto2.call(Persona5, 'Ingeniero', '1289995444'));
+// metodo Aply
+let arreglo = ['Ingeniero', '8799999999'];
+console.log(Persona4.nombreCompleto2.apply(Persona5, arreglo));
+
+//HASTA COMPLETO TODO HASTA CLASE 5 DE JAVASCRIPT

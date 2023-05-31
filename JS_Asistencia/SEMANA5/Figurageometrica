@@ -1,9 +1,9 @@
+
 package domain;
 
 /**
  * @author ANDRES, DEFINIMOS LA CLASE PADRE ABSTRACTA
- *hilda
- **/
+ */
 public abstract class FiguraGeometrica {
     protected String tipoFigura;
     protected FiguraGeometrica(String tipoFigura){
@@ -25,8 +25,5 @@ public abstract class FiguraGeometrica {
     public String toString() {
         return "FiguraGeometrica{" + "tipoFigura=" + tipoFigura + '}';
     }
-    
-    
-}
-
+}    
 
