@@ -1,0 +1,15 @@
+
+
+package accesodatos;
+
+public interface IAccesoDatos {
+    // esta no hereda de la clase object
+    int Max_registro = 10;// siempre se dbe hacer una asignacion 
+    // al declarar pq no tiene constructor
+    
+    // Metodo insertar es abstracto y sin curso
+    void insertar();
+    void listar();
+    void actualizar();
+    void eliminar();
+}
