@@ -1,0 +1,76 @@
+t
+
+console.log('comenzamos con el metodo get y set para idioma');
+ persona.lang = 'en';
+ console.log(persona.lang);
+
+
+function Persona3(nombre, apellido, email){//constructor
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre+' '+this.apellido;
+    }
+}
+let padre = new Persona3('Leo', 'Lopez', 'lopezl@gmail.com');
+padre.telefono = "456789";
+console.log(padre);
+console.log(padre.nombreCompleto());
+
+let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
+//madre.telefono = '789222211';
+console.log(madre);
+console.log(madre.nombreCompleto());
+ 
+let miObjeto = new Object();
+let miObjeto2 =  {};
+let miCadena1 = new String('Hola');//sintaxis formal
+//caso string 2
+let miCadena2 = 'Hola';
+
+// con numeros creacion de objetos 
+
+let miNumero = new Number(1);
+let miNumero2 = 1;
+
+let miBoolean = new Boolean(false);
+let miBoolean2 = false;
+//caso Arreglos
+
+let miArreglo1 = new Array();
+let miArreglo2 = [];
+
+let miFuncion = new function(){};
+let miFuncion2 = function() {};// sintaxis formal y simplificada recomendada
+
+// uso de prototype
+ 
+Persona3.prototype.telefono = '78999954';
+console.log(padre);
+console.log(madre);
+madre.telefono = '4578888955';
+console.log(madre.telefono);
+
+// uso de call, podemos llamar a unmetodo que esta en otro objet 
+
+let Persona4 ={
+    nombre: 'Jose',
+    apellido:"Peres",
+    nombreCompleto2: function(titulo, telefono){
+        //return titulo+' : '+this.nombre+' '+this.apellido+' '+telefono;
+       return this.nombre+' '+this.apellido;
+       }
+    }
+ let Persona5 = {
+    nombre: "Carlos",
+    apellido:"Lara"
+ }
+ console.log(Persona4.nombreCompleto2('Licenciado', '4578899955'));
+ console.log(Persona4.nombreCompleto2.call(Persona5, 'Ingeniero', '1289995444'));
+// metodo Aply
+let arreglo = ['Ingeniero', '8799999999'];
+console.log(Persona4.nombreCompleto2.apply(Persona5, arreglo));
+
+//HASTA COMPLETO TODO HASTA CLASE 5 DE JAVASCRIPT
+
