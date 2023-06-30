@@ -1,0 +1,4 @@
+console.log('cambiamos y eliminamos un error'); 
+persona apellida = "benegas";//cambiamos dinámicamente un valor de del objeto
+delete persona.apellida; //eliminamos un error
+consolé.log(persona)
