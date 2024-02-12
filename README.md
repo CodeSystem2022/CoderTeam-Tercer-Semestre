@@ -13,7 +13,7 @@
 
 -:computer: Diego Alvarez.
 
--:computer: Natán Jabie.
+-:computer: Nатаи Јаbiе.
 
 -:computer: Hilda Yolanda Ortiz.
 
